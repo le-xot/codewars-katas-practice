@@ -1,0 +1,13 @@
+```js
+var countBits = function (n) {
+    let temp = 0
+    let newString = n.toString(2)
+    for (let i = 0; i < newString.length; i++) {
+        if (newString[i] == 1) {
+            temp++
+        }
+    }
+    return temp
+};
+console.log(countBits(7));
+```

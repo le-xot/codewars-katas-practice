@@ -1,0 +1,21 @@
+```js
+function findOutlier(integers) {
+    let isOdd = 0
+    for (let i = 0; i < integers.length; i++) {
+        if (integers[i] % 2) {
+            isOdd++
+        }
+    }
+    console.log(isOdd);
+    for (let i = 0; i < integers.length; i++) {
+        if (isOdd === 1 && (integers[i] % 2 == 1 || integers[i] % 2 == -1)) {
+            return integers[i]
+        }
+        if ((isOdd !== 1) && integers[i] % 2 == 0) {
+            return integers[i]
+        }
+    }
+}
+console.log(`|${-49072819 % 2}|`)
+console.log(findOutlier([-162724836, -125142458, 9657828, 36967122, -27185136, 180879346, -125964586, -49072819, -191842154, -91087800]));
+```

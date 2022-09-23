@@ -1,0 +1,26 @@
+```js
+// moveZeros([1,0,1,2,0,1,3,"a"]) // returns[1,1,2,1,3,"a",0,0]
+
+function moveZeros(arr) {
+    let Temp = 0
+    const Zero = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 0) {
+            arr.splice(i, 1)
+            i--
+            Temp++
+        }
+    }
+    console.log(`|${arr}|`);
+    for (let i = 0; i < Temp; i++) {
+        arr = arr.concat(Zero)
+    }
+    return arr
+}
+
+
+console.log(moveZeros([9, 0, 9, 1, 2, 1, 1, 3, 1, 9, 0, 0, 9, 0, 0, 0, 0, 0, 0, 0]));
+
+// expected[9, 0, 9, 1, 2, 1, 1, 3, 1, 9, 0, 0, 9, 0, 0, 0, 0, 0, 0, 0]
+// to deeply equal[9, 9, 1, 2, 1, 1, 3, 1, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+```

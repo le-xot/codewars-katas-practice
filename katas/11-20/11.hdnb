@@ -1,0 +1,30 @@
+```js
+function findUniq(arr) {
+    if (arr[0] == arr[1]) {
+        let Temp = arr[0]
+        for (let i = 0; i < arr.length; i++) {
+            if (Temp !== arr[i]) {
+                return arr[i]
+            }
+        }
+    }
+    if (arr[0] == arr[2]) {
+        let Temp = arr[0]
+        for (let i = 0; i < arr.length; i++) {
+            if (Temp !== arr[i]) {
+                return arr[i]
+            }
+        }
+    }
+    if (arr[1] == arr[2]) {
+        let Temp = arr[1]
+        for (let i = 0; i < arr.length; i++) {
+            if (Temp !== arr[i]) {
+                return arr[i]
+            }
+        }
+    }
+}
+
+console.log(findUniq([2, 1, 1]));
+```

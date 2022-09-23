@@ -1,0 +1,16 @@
+```js
+function order(words) {
+    let newOrder = words.split(' ')
+    let result = []
+    for (let i = 0; i < newOrder.length; i++) {
+        for (let j = 1; j < newOrder.length + 1; j++) {
+            if (newOrder[i].includes(j)) {
+                result[j] = newOrder[i]
+            }
+        }
+    }
+    return result.join(' ')
+}
+
+console.log(order("4of Fo1r pe6ople g3ood th5e the2"));
+```

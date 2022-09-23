@@ -1,0 +1,13 @@
+```js
+function accum(str) {
+    const ans = []
+    for (let i = 0; i < str.length; i++) {
+        let abc = str[i].toUpperCase() + str[i].repeat(i).toLowerCase()
+        ans.push(abc)
+    }
+    return ans.join('-')
+}
+
+
+console.log(accum("ZpglnRxqenU"));
+```
