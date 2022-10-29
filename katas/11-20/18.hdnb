@@ -1,3 +1,14 @@
 ```js
+function humanReadable(seconds) {
+    let SS = Math.floor(seconds % 60)
+    let MM = Math.floor(seconds / 60 % 60)
+    let HH = Math.floor(seconds / 3600)
+    console.log(HH);
+    return (HH + ':' + MM + ':' + SS)
+}
 
+
+
+
+console.log(humanReadable(59));
 ```

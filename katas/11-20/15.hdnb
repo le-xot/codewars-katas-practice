@@ -1,3 +1,10 @@
 ```js
+function sumTwoSmallestNumbers(numbers) {
+    return (numbers.sort(compareNumbers)[0] + numbers.sort(compareNumbers)[1])
+}
+function compareNumbers(a, b) {
+    return a - b;
+}
 
+sumTwoSmallestNumbers([5, 8, 12, 19, 22])
 ```

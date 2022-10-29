@@ -1,3 +1,24 @@
 ```js
+function productFib(prod) {
+    let F = []
+    let answer = []
+    F[0] = 0
+    F[1] = 1
 
+    for (let i = 2; i < 52; i++) {
+        F[i] = F[i - 1] + F[i - 2]
+    }
+
+    console.log(F);
+    for (let i = 0; i < F.length; i++) {
+        if (F[i] * F[i + 1] == prod) {
+            return answer.concat(F[i]).concat(F[i + 1]).concat(true)
+        }
+        if (F[i] * F[i + 1] > prod) {
+            return answer.concat(F[i]).concat(F[i + 1]).concat(false)
+        }
+    }
+}
+
+productFib(714)
 ```

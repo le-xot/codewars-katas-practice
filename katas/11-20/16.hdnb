@@ -1,3 +1,23 @@
 ```js
+function DNAStrand(dna) {
+    let result = ""
+    for (let i = 0; i < dna.length; i++) {
+        if (dna[i] == "A") {
+            result = result.concat("T")
+        }
+        if (dna[i] == "T") {
+            result = result.concat("A")
+        }
+        if (dna[i] == "G") {
+            result = result.concat("C")
+        }
+        if (dna[i] == "C") {
+            result = result.concat("G")
+        }
+    }
+    return result
+}
 
+
+DNAStrand("ATTGC")
 ```

@@ -1,0 +1,49 @@
+```js
+function dirReduc(arr) {
+    let stack = []
+    stack[0] = arr[0]
+
+    for (let i = 1; i < arr.length; i++) {
+        switch (arr[i]) {
+            case 'NORTH':
+                if (stack[stack.length-1] !== 'SOUTH') {
+                    stack.push(arr[i])
+                }
+                else {
+                    stack.pop()
+                }
+                break;
+            case 'SOUTH':
+                if (stack[stack.length-1] !== 'NORTH') {
+                    stack.push(arr[i])
+                }
+                else {
+                    stack.pop()
+                }
+                break;
+            case 'WEST':
+                if (stack[stack.length-1] !== 'EAST') {
+                    stack.push(arr[i])
+                }
+                else {
+                    stack.pop()
+                }
+                break;
+            case 'EAST':
+                if (stack[stack.length-1] !== 'WEST') {
+                    stack.push(arr[i])
+                }
+                else {
+                    stack.pop()
+                }
+                break;
+        }
+        console.log(stack);
+    }
+   
+    return stack
+}
+
+
+dirReduc(["EAST","EAST","WEST","NORTH","WEST","EAST","EAST","SOUTH","NORTH","WEST"])
+```

@@ -1,3 +1,39 @@
 ```js
+function productFib(prod) {
+    let F = []
+    let answers = []
+    let remider = 0
+    F[0] = 0
+    F[1] = 1
 
+    for (let i = 2; i < 41; i++) {
+        F[i] = F[i - 1] + F[i - 2]
+    }
+
+    for (let i = 2; i < F.length; i++) {
+        remider = prod / F[i]
+        for (let j = 2; j < F.length; j++) {
+            if (remider == F[j]) {
+                answers = answers.concat(remider)
+            }
+        }
+    }
+    answers = answers.sort(compareNumbers)
+
+    if (answers.length == 1) {
+        answers[1] = answers[0]
+    }
+
+    console.log(answers);
+    if (answers[0] == '') {
+        return
+    }
+
+}
+
+function compareNumbers(a, b) {
+    return a - b;
+}
+
+productFib(5895)
 ```
