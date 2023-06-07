@@ -1,0 +1,17 @@
+```js
+function isIsogram(str) {
+  let newStr = str.toLowerCase();
+  const uniqueLetters = new Set();
+  for (let i = 0; i < newStr.length; i++) {
+    if (!uniqueLetters.has(newStr[i])) {
+      uniqueLetters.add(newStr[i]);
+    } else {
+      return false;
+    }
+  }
+  return true;
+}
+
+isIsogram("Dermatoglyphics");
+
+```

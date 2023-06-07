@@ -1,0 +1,19 @@
+```js
+function anagramDifference(w1, w2) {
+  let word1 = w1.split("");
+  let word2 = w2.split("");
+  let newStr;
+  for (let i = 0; i < word1.length; i++) {
+    for (let j = 0; j < word2.length; j++) {
+      if (word1[i] === word2[j]) {
+        word1[i] = "";
+        word2[i] = "";
+      }
+    }
+  }
+  return (newStr = (word1.join("") + word2.join("")).length);
+}
+
+anagramDifference("codewars", "hackerrank");
+
+```
