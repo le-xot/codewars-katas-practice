@@ -1,0 +1,20 @@
+```js
+function zeros(n) {
+  let zerosNumbs = 0;
+  let j = 0;
+  for (let i = 5; i <= n; i += 5) {
+    j = i;
+    while (j % 5 == 0) {
+      zerosNumbs++;
+      j = j / 5;
+    }
+  }
+  return zerosNumbs;
+}
+
+
+
+
+console.log(zeros(30));
+
+```

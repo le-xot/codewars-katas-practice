@@ -1,0 +1,20 @@
+```js
+function persistence(num) {
+  let multi = 0;
+  let persistence = 0;
+  let number = num.toString();
+
+  while (number > 9) {
+    number = number.toString();
+    multi = number[0];
+    persistence++;
+    for (let i = 1; i < number.length; i++) {
+      multi = multi * number[i];
+    }
+    number = multi;
+  }
+
+  return persistence;
+}
+
+```

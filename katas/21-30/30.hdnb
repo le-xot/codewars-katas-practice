@@ -1,0 +1,9 @@
+```js
+function productSansN(n) {
+    const product = n.reduce((acc, cur) => acc * cur); 
+    return n.map(num => product / num);
+}
+
+console.log(productSansN([9, 0, -2]));
+
+```
